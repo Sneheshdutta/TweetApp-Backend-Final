@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: arn:aws:ecs:ap-south-1:034759904638:task-definition/tweetapp-subhajit-td:2
+        LoadBalancerInfo:
+          ContainerName: tweetapp-subhajit-container
+          ContainerPort: "8080"
+        PlatformVersion: "LATEST"
